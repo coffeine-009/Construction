@@ -17,6 +17,7 @@ class CreateAttachmentsTable extends Migration {
 			$table->increments('id');
             $table->integer('id_item', false, true);
             $table->string('title');
+            $table->string('file_name');
 			$table->timestamps();
 		});
 	}

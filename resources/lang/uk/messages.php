@@ -17,4 +17,5 @@ return [
     "delete.success"    => "Видалено!",
     "create.success"    => "Створено!",
     "update.success"    => "Оноовлено!",
+    'wrong_credentials' => 'Невірний логін або пароль',
 ];

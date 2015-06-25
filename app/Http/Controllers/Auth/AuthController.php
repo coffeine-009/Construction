@@ -47,13 +47,23 @@ class AuthController extends Controller {
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function getRegister()
-    {
-        return redirect('auth/login');
-    }
+//    public function getRegister()
+//    {
+//        return redirect('auth/login');
+//    }
+//
+//    public function postRegister()
+//    {
+//        //Disable registrations
+//    }
 
-    public function postRegister()
-    {
-        //Disable registrations
-    }
+    /**
+     * Localization error messages of authorization.
+     *
+     * @return string
+     */
+	protected function getFailedLoginMessage()
+	{
+		return trans( 'messages.wrong_credentials' );
+	}
 }

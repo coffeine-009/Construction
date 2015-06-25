@@ -47,7 +47,7 @@ class ItemController extends Controller
         CategoryService $categoryService,
         ItemService $itemService
     ) {
-        $this -> middleware( 'auth', [ 'except' => [ 'index', 'show' ] ] );
+        $this -> middleware( 'auth', [ 'except' => [ 'index', 'listAction', 'show' ] ] );
 
         //- Inject dependencies -//
         $this -> categoryService = $categoryService;

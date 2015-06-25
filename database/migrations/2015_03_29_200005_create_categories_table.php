@@ -14,18 +14,19 @@ class CreateCategoriesTable extends Migration {
 	{
 		Schema::create('categories', function(Blueprint $table)
 		{
-			$table->increments('id');
-            $table->integer('id_parent_category')->unsigned();
-            $table->string('title');
-            $table->string('description');
-			$table->timestamps();
+			$table -> increments('id');
+            $table
+				-> integer( 'id_parent_category' )
+				-> unsigned()
+				-> nullable();
+            $table -> string( 'title' );
+            $table -> string( 'description' );
+			$table -> timestamps();
 
-            $table->foreign('id_parent_category')->references('id')->on('categories');
+            $table -> foreign('id_parent_category')
+                -> references( 'id' )
+                -> on( 'categories' );
 		});
-
-//        Schema::table('categories', function($table) {
-//            $table->foreign('id_parent_category')->references('id')->on('categories');
-//        });
 	}
 
 	/**

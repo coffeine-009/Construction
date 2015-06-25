@@ -6281,8 +6281,6 @@ label,
 }
 
 footer {
-    background: linear-gradient(top, #e3e3e3, #f3f3f3, #fff);
-    background: -webkit-linear-gradient(top, #e3e3e3, #f3f3f3, #fff);
     line-height: 2.5em;
     margin-top: 5px;
     padding: 5px;

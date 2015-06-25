@@ -4,12 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Validation Language Lines
+    | Labels
     |--------------------------------------------------------------------------
     |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
+    | The following language lines contain the labels used by
+    | the views.
     |
     */
 
@@ -27,4 +26,11 @@ return [
     "create"        => "Створити",
     "edit"          => "Редагувати",
     "delete"        => "Видалити",
+    "logo"          => "Теплофасад",
+    "login"         => "Вхід",
+    "register"      => "Реєстрація",
+    "logout"        => "Вихід",
+    "password"      => "Пароль",
+    "rememberme"    => "Пам'ятати мене",
+    "forgotpassword"=> "Забули пароль",
 ];
