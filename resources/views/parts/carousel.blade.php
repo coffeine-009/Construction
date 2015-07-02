@@ -31,6 +31,16 @@
                     <p>
                         Ваша споруда матиме сучасний європейський вид!
                     </p>
+
+                    <p>
+                        <a
+                            class = "btn btn-lg btn-primary"
+                            href = "/categories/2/items"
+                            role = "button"
+                            >
+                            {{ trans( 'buttons.view' ) }}
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -48,9 +58,9 @@
                     <p>
                         <a
                             class = "btn btn-lg btn-primary"
-                            href = "/categories/2/items"
+                            href = "/categories/3/items"
                             role = "button"
-                        >
+                            >
                             {{ trans( 'buttons.view' ) }}
                         </a>
                     </p>
