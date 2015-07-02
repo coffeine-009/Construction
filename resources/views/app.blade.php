@@ -158,8 +158,6 @@
                             </li>
                             @if (Auth::guest())
                             <li><a href = "{{ url('/auth/login') }}">{{ trans( 'labels.login' ) }}</a></li>
-                            <li><a href = "{{ url('/auth/register') }}">{{ trans( 'labels.register' ) }}</a>
-                            </li>
                             @else
                             <li class = "dropdown">
                                 <a
