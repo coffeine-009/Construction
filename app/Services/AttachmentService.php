@@ -6,6 +6,7 @@
  */
 
 namespace App\Services;
+use App\Attachment;
 
 /**
  * Interface AttachmentService

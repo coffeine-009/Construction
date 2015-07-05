@@ -39,6 +39,11 @@ Route::get('/items/{id}/edit', 'ItemController@edit');
 Route::post('/items/{id}', 'ItemController@update');
 Route::get('/items/{id}/delete', 'ItemController@destroy');
 Route::delete('attachments/{id}', 'AttachmentController@destroy');
+//- Advertisement -//
+Route::get('/advertisements', 'AdvertisementController@index');
+Route::get('/advertisements/create', 'AdvertisementController@create');
+Route::post('/advertisements', 'AdvertisementController@store');
+Route::get('/advertisements/{id}', 'AdvertisementController@show');
 
 //- Composing views -//
 View::composer('parts.menu', function($view){

@@ -23,7 +23,7 @@ class UpdateItemRequest extends Request {
 	public function rules()
 	{
         return [
-            'attachments'   => 'required|array:image',
+            'attachments'   => 'array:image',
             'category'      => 'required|exists:categories,id',
             'title'         => 'required|exists:items,title|max:255',
             'description'   => 'required|min:8'

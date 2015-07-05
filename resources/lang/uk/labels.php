@@ -15,6 +15,7 @@ return [
     "parent"        => "Батьківська",
     "title"         => "Назва",
     "description"   => "Опис",
+    "message"       => "Повідомлення",
     "updated"       => "Оновлено",
     "created"       => "Створено",
     "actions"       => "Дії",

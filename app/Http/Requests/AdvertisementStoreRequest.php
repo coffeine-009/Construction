@@ -1,21 +1,20 @@
-<?php namespace App\Http\Requests;
+<?php
 /**
  * @copyright 2015 (c), by Vitaliy Tsutsman
  *
  * @author Vitaliy Tsutsman <vitaliyacm@gmail.com>
  */
 
+namespace App\Http\Requests;
+
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Class UpdateCategoryRequest
- * Validation request for update category.
- *
+ * Class AdvertisementStoreRequest
  * @package App\Http\Requests
  */
-class UpdateCategoryRequest extends Request
+class AdvertisementStoreRequest extends Request
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -23,8 +22,7 @@ class UpdateCategoryRequest extends Request
      */
     public function authorize()
     {
-        //- Check permissions -//
-        return Auth::check();
+        return Auth :: check();
     }
 
     /**
@@ -34,11 +32,9 @@ class UpdateCategoryRequest extends Request
      */
     public function rules()
     {
-        //- Set validators -//
         return [
-            'title'         => 'required|exists:categories,title|max:255',
-            'description'   => 'required|min:8'
+            'attachment'    => 'required|image',
+            'message'       => 'required|max:255'
         ];
     }
-
 }

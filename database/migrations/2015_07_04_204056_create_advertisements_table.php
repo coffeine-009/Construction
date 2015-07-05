@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAttachmentsTable extends Migration
+class CreateAdvertisementsTable extends Migration
 {
 
     /**
@@ -13,20 +13,21 @@ class CreateAttachmentsTable extends Migration
      */
     public function up()
     {
-        Schema :: create( 'attachments', function ( Blueprint $table ) {
+        Schema :: create( 'advertisements', function ( Blueprint $table ) {
             $table -> increments( 'id' );
-            $table -> integer( 'id_item', false, true );
-            $table -> string( 'title' );
-            $table -> string( 'file_name' );
+            $table
+                -> integer( 'id_attachment' )
+                -> unsigned()
+                -> unique();
+            $table -> string( 'message' );
             $table -> timestamps();
-        } );
+        });
 
-        Schema :: table( 'advertisements', function ( $table ) {
+        Schema :: table( 'advertisements', function( $table ) {
             $table -> foreign( 'id_attachment' )
                 -> references( 'id' )
                 -> on( 'attachments' );
-        } );
-
+        });
     }
 
     /**
@@ -36,7 +37,6 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop( 'attachments' );
+        Schema::drop('advertisements');
     }
-
 }

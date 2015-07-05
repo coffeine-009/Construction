@@ -46,6 +46,11 @@ class AppServiceProvider extends ServiceProvider {
         );
 
         $this->app->bind(
+            'App\Services\AdvertisementService',
+            'App\Services\Implementation\AdvertisementServiceImpl'
+        );
+
+        $this->app->bind(
             'App\Services\Implementation\UploadHandler',
             'App\Services\Implementation\UploadHandler'
         );
